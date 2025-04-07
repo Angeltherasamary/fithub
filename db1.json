@@ -1,0 +1,47 @@
+{
+    "exercises": [
+      {
+        "range": [0, 10],
+        "category": "Beginner",
+        "exercises": ["Jumping Jacks", "Wall Push-ups", "Bodyweight Squats"]
+      },
+      {
+        "range": [11, 20],
+        "category": "Intermediate",
+        "exercises": ["Push-ups", "Lunges", "Plank"]
+      },
+      {
+        "range": [21, 30],
+        "category": "Advanced",
+        "exercises": ["Burpees", "Pull-ups", "Deadlifts"]
+      }
+    ],
+    "dietRecommendations": [
+      {
+        "range": [0, 10],
+        "category": "Low Fat",
+        "items": ["Chicken Breast", "Broccoli", "Brown Rice", "Greek Yogurt", "Egg Whites"]
+      },
+      {
+        "range": [11, 20],
+        "category": "Moderate Fat",
+        "items": ["Salmon", "Quinoa", "Mixed Greens", "Almonds", "Cottage Cheese"]
+      },
+      {
+        "range": [21, 30],
+        "category": "High Fat",
+        "items": ["Avocado", "Peanut Butter", "Chia Seeds", "Tofu", "Olive Oil"]
+      },
+      {
+        "range": [31, 40],
+        "category": "Very High Fat",
+        "items": ["lean protien","fat less meet", "Coconut Oil", "Brazil Nuts", "Fish", "Dark Chocolate"]
+      },
+      {
+        "range": [41, 50],
+        "category": "Extreme Fat",
+        "items": ["Lean Proteins", "Leafy Greens", "Legumes", "Berries", "Healthy Fats"]
+      }
+    ]
+  }
+  
