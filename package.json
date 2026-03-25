@@ -6,11 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build && node -e \"require('fs').writeFileSync('out/.nojekyll', '')\"",
+    "deploy": "npx gh-pages -d out -t"
   },
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
+    "@google/generative-ai": "^0.24.1",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.9.1",
     "cloudinary": "^1.37.1",
