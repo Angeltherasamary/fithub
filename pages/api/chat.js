@@ -35,7 +35,7 @@ Disclaimer: Briefly remind users to consult a doctor for serious medical conditi
     const lastMessage = messages[messages.length - 1].content;
 
     const model = genAI.getGenerativeModel({ 
-      model: "gemini-2.5-flash", 
+      model: "gemini-1.5-flash", 
       systemInstruction: systemPrompt 
     });
 
