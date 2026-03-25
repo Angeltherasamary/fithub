@@ -1,5 +1,4 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import exercisesData from "../../db.json";
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -9,17 +8,12 @@ export default async function handler(req, res) {
   try {
     const { messages } = req.body;
     
-    // Provide a comprehensive system instruction including Fithub's entire dataset
     const systemPrompt = `You are the Fithub AI Assistant, an expert in health, fitness, and workouts.
 Fithub is a comprehensive web application for fitness enthusiasts.
-Below is the ENTIRE dataset of over 1000 exercises available on Fithub in JSON format. 
-You must use this data as your source of truth when users ask about specific exercises, target muscles, body parts, or equipment.
+Act as a virtual personal trainer. Answer questions about fitness, exercises, form, equipment, and general health based on your vast internal knowledge base.
+If a user asks how to perform an exercise, provide clear, step-by-step instructions.
 Tone: Enthusiastic, motivating, helpful, and professional.
-Disclaimer: Remind users to consult a doctor for serious medical conditions.
-
-Fithub Exercises Dataset:
-${JSON.stringify(exercisesData.map(e => ({name: e.name, target: e.target, bodyPart: e.bodyPart, equipment: e.equipment})))}
-`;
+Disclaimer: Briefly remind users to consult a doctor for serious medical conditions when appropriate.`;
 
     const apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) {
