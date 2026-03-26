@@ -1,1 +1,2 @@
-export const prefix = "";
+export const prefix = process.env.NODE_ENV === "production" ? "/fithub" : "";
+
